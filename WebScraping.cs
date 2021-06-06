@@ -48,5 +48,40 @@ namespace console_proyecto_so_2
             return "\n";
         }
 
+        public string GetElMundo(string url)
+        {
+            var doc = web.Load(url);
+            
+            var newsContainer = doc.DocumentNode.SelectNodes("//*[@id='main-content']/div[3]");
+
+            var news = newsContainer.CssSelect(".mh-posts-grid-col");
+            
+            foreach (var node in news)
+            {
+                var title = node.CssSelect(".mh-posts-grid-title").First().InnerText;
+
+                var summary = node.CssSelect(".mh-excerpt").First()
+                    .CssSelect("p").First().InnerText;
+
+                var imagePath = node.CssSelect(".wp-post-image").First()
+                    .Attributes["src"].Value;
+
+                var imageUrl = "https://www.elmundo.cr" + imagePath;
+
+                Console.WriteLine(title);
+                Console.WriteLine(summary);
+                Console.WriteLine(imageUrl);
+                Console.WriteLine();
+            }
+            
+            // Get title
+
+            // Get summary
+
+            // Get image
+
+            return "";
+        }
+        
     }
 }
