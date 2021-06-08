@@ -24,9 +24,9 @@ namespace console_proyecto_so_2
             // Scraping El Mundo CR news
             list = ws.GetElMundo(ElMundo, list);
 
-            foreach (var n in list)
+            foreach (var news in list)
             {
-                n.ToString();
+                news.ToString();
             }
         }
 
