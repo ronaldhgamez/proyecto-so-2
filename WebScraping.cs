@@ -16,46 +16,40 @@ namespace console_proyecto_so_2
         }
 
         /* Get text from BBC home page */
-        public string GetBBCNews(string url)
+        public List<Website> GetBBCNews(string url, List<Website> list)
         {
             HtmlDocument doc = web.Load(url);
             HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes("//*[@class=\"lx-stream__post-container\"]");
-            Console.WriteLine("total nodes: " + nodes.Count);
 
             /* Go through every li html tags */
             foreach (HtmlNode li_node in nodes)
             {
-                //Console.WriteLine(li_node.OuterHtml);
-
                 /* get title from news */
                 var html_a = li_node.CssSelect(".qa-heading-link").First();
-                string title = html_a.InnerText;
+                string title = html_a.InnerText.Trim();
 
                 /* get paparagraph from news */
                 var html_p = li_node.CssSelect(".lx-stream-related-story--summary").First();
-                string paragraph = html_p.InnerText;
+                string paragraph = html_p.InnerText.Trim();
                 
                 /* get image from news */
                 var htmlDiv = li_node.CssSelect(".qa-story-image-link").FirstOrDefault();
                 var html_img = htmlDiv.Element("div").Element("img");
-                string img = html_img.Attributes["src"].Value;
+                string img_url = html_img.Attributes["src"].Value;
 
-                Console.WriteLine(title);
-                Console.WriteLine(paragraph);
-                Console.WriteLine(img);
-                Console.WriteLine("------------\n");
+                list.Add(new Website(title, paragraph, img_url));
             }
-            return "\n";
+            return list;
         }
 
-        public string GetElMundo(string url)
+        public List<Website> GetElMundo(string url, List<Website> list)
         {
             var doc = web.Load(url);
-            
+
             var newsContainer = doc.DocumentNode.SelectNodes("//*[@id='main-content']/div[3]");
 
             var news = newsContainer.CssSelect(".mh-posts-grid-col");
-            
+
             foreach (var node in news)
             {
                 var title = node.CssSelect(".mh-posts-grid-title").First().InnerText;
@@ -68,19 +62,9 @@ namespace console_proyecto_so_2
 
                 var imageUrl = "https://www.elmundo.cr" + imagePath;
 
-                Console.WriteLine(title);
-                Console.WriteLine(summary);
-                Console.WriteLine(imageUrl);
-                Console.WriteLine();
+                list.Add(new Website(title.Trim(), summary.Trim(), imageUrl));
             }
-            
-            // Get title
-
-            // Get summary
-
-            // Get image
-
-            return "";
+            return list;
         }
         
     }
