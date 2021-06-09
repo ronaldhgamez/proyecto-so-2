@@ -5,10 +5,10 @@ namespace console_proyecto_so_2
 {
     class Program
     {
-        public static string bbc_1 = "https://www.bbc.com/mundo/topics/c67q9nnn8z7t"; // covid
-        public static string bbc_2 = "https://www.bbc.com/mundo/topics/c06gq9v4xp3t"; // economia
-        public static string bbc_3 = "https://www.bbc.com/mundo/topics/cyx5krnw38vt"; // tecnologia
-        private const string ElMundo = "https://www.elmundo.cr/costa-rica";
+        public const string bbc_1 = "https://www.bbc.com/mundo/topics/c67q9nnn8z7t"; // covid
+        public const string bbc_2 = "https://www.bbc.com/mundo/topics/c06gq9v4xp3t"; // economia
+        public const string bbc_3 = "https://www.bbc.com/mundo/topics/cyx5krnw38vt"; // tecnologia
+        public const string ElMundo = "https://www.elmundo.cr/costa-rica";
 
         static void Main(string[] args)
         {
@@ -28,6 +28,10 @@ namespace console_proyecto_so_2
             {
                 news.ToString();
             }
+
+            /* Starts Server */
+            //Server server = new Server("localhost", 3000);
+            //server.Start();
         }
 
     }
