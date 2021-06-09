@@ -42,6 +42,12 @@ namespace console_proyecto_so_2
             return list;
         }
 
+        /// <summary>
+        /// Gets the news from El Mundo CR home page
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="list"></param>
+        /// <returns></returns>
         public List<Website> GetElMundo(string url, List<Website> list)
         {
             var doc = web.Load(url);
