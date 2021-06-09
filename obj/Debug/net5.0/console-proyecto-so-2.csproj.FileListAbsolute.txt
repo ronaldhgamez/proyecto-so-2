@@ -39,45 +39,4 @@ D:\2021 I Semestre\IC6600 Principios de Sistemas Operativos\Proyecto 2\console-p
 D:\2021 I Semestre\IC6600 Principios de Sistemas Operativos\Proyecto 2\console-proyecto-so-2\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\2021 I Semestre\IC6600 Principios de Sistemas Operativos\Proyecto 2\console-proyecto-so-2\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\2021 I Semestre\IC6600 Principios de Sistemas Operativos\Proyecto 2\console-proyecto-so-2\obj\Debug\net5.0\console-proyecto-so-2.csproj.CopyComplete
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.csprojAssemblyReference.cache
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.GeneratedMSBuildEditorConfig.editorconfig
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.AssemblyInfoInputs.cache
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.AssemblyInfo.cs
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.csproj.CoreCompileInputs.cache
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\ref\console-proyecto-so-2.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.pdb
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\console-proyecto-so-2.exe
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\console-proyecto-so-2.deps.json
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\console-proyecto-so-2.runtimeconfig.json
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\console-proyecto-so-2.runtimeconfig.dev.json
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\console-proyecto-so-2.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\ref\console-proyecto-so-2.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\console-proyecto-so-2.pdb
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\FSharp.Core.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\HtmlAgilityPack.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\ScrapySharp.Core.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\ScrapySharp.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\System.Runtime.Caching.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\System.Xml.XPath.XmlDocument.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\cs\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\de\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\en\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\es\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\fr\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\it\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\ja\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\ko\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\pl\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\pt-BR\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\ru\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\tr\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\zh-Hans\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\zh-Hant\FSharp.Core.resources.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.csproj.CopyComplete
-D:\Repositorios\dotnet Projects\proyecto-so-3\obj\Debug\net5.0\console-proyecto-so-2.genruntimeconfig.cache
-D:\Repositorios\dotnet Projects\proyecto-so-3\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\2021 I Semestre\IC6600 Principios de Sistemas Operativos\Proyecto 2\console-proyecto-so-2\bin\Debug\net5.0\Newtonsoft.Json.dll
