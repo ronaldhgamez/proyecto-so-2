@@ -36,6 +36,10 @@ namespace console_proyecto_so_2
                 : 0;
         }
 
+        /// <summary>
+        /// Obtiene la cantidad total de palabras de la categoría
+        /// </summary>
+        /// <returns></returns>
         public double GetTotalWords()
         {
             return Words.Count;

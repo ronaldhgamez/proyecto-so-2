@@ -23,12 +23,40 @@ namespace console_proyecto_so_2
         }
 
         /// <summary>
+        /// Obtiene la cantidad total de palabras sumando todas las categorías
+        /// </summary>
+        /// <returns></returns>
+        private double GetTotalWords()
+        {
+            return _categories.Values.Sum(cat => cat.GetTotalWords());
+        }
+
+        /// <summary>
+        /// Clasifica una lista de noticias
+        /// </summary>
+        /// <param name="news">Lista de noticias</param>
+        public void Classify(List<Website> news)
+        {
+            Parallel.ForEach(news, item =>
+            {
+                var (categoryName, score) = Classify(item);
+
+                item.CategoryName = categoryName;
+
+                item.Score = score;
+
+            });
+        }
+        
+        /// <summary>
         /// Clasifica un texto
         /// </summary>
-        /// <param name="text">Texto que se va a clasificar</param>
+        /// <param name="news">Noticia que se va a clasificar</param>
         /// <returns></returns>
-        public double[] Classify(string text)
+        private (string, double) Classify(Website news)
         {
+            var text = news.GetText();
+            
             var scoreIndex = new Dictionary<string, int>();
 
             text = new string(text.Where(c => !char.IsPunctuation(c)).ToArray());
@@ -45,48 +73,58 @@ namespace console_proyecto_so_2
                 index++;
             }
 
-            var score = new double[index + 1];
+            var scores = new double[index];
             
             // Asigna una puntuación a cada categoría usando el algoritmo de Bayes Ingenuo
-            // foreach (var word in words)
-            // {
-            //     foreach (var category in _categories)
-            //     {
-            //         var count = category.Value.GetWordCount(word);
-            //
-            //         if (count <= 0) continue;
-            //         
-            //         var wordScore = count / category.Value.GetTotalWords();
-            //
-            //         var currentScore = score[category.Value.Name];
-            //         
-            //         score[category.Value.Name] = currentScore == 0 
-            //             ? wordScore 
-            //             : currentScore * wordScore;
-            //     }
-            // }
-
             Parallel.ForEach(words, word =>
             {
                 foreach (var category in _categories)
                 {
                     var count = category.Value.GetWordCount(word);
 
-                    if (count <= 0) continue;
+                    var totalWords = category.Value.GetTotalWords();
                     
-                    var wordScore = count / category.Value.GetTotalWords();
-            
-                    var currentScore = score[scoreIndex[category.Value.Name]];
+                    var currentScore = scores[scoreIndex[category.Value.Name]];
+                    
+                    double wordScore = 0 < count 
+                        ? Math.Log(count / totalWords) 
+                        : 0;
 
                     Interlocked.Exchange(
-                        ref score[scoreIndex[category.Value.Name]], 
+                        ref scores[scoreIndex[category.Value.Name]], 
                         currentScore == 0 
                             ? wordScore 
-                            : currentScore * wordScore);
+                            : currentScore + wordScore);
                 }
             });
             
-            return score;
+            // foreach (var (name, cat) in _categories)
+            // {
+            //     var i = scoreIndex.FirstOrDefault(x => x.Key == name);
+            //
+            //     var catTotalWords = cat.GetTotalWords();
+            //     
+            //     var totalWords = GetTotalWords();
+            //     
+            //     scores[i.Value] += Math.Log(catTotalWords / totalWords);
+            // }
+
+            var scoresMapped = scores.Where(x => x != 0).ToArray();
+
+            var maxScore = 0.00;
+
+            var categoryName = "Categoría Indefinida";
+            
+            if (scoresMapped.Length != 0)
+            {
+                maxScore = scoresMapped.Min();
+                
+                var arrayIndex = Array.IndexOf(scores, maxScore);
+                            
+                categoryName = scoreIndex.FirstOrDefault(x => x.Value == arrayIndex).Key;
+            }
+            
+            return (categoryName, maxScore);
         }
     }
 }

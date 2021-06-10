@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace console_proyecto_so_2
 {
-    class Website
+    public class Website
     {
         public string title;
         public string description;
         public string img_url;
+        
+        public string CategoryName { get; set; }
+        
+        public double Score { get; set; }
 
         public Dictionary<string, int> categories;
         public string category;
@@ -45,7 +49,14 @@ namespace console_proyecto_so_2
             Console.WriteLine("\"{0}\"", this.title);
             Console.WriteLine("\"{0}\"", this.description);
             Console.WriteLine("\"{0}\"", this.img_url);
+            Console.WriteLine("\"{0}\"", CategoryName);
+            Console.WriteLine("\"{0}\"", Score.ToString());
             Console.WriteLine("-------------------------\n");
+        }
+
+        public string GetText()
+        {
+            return title + " " + description;
         }
     }
 }

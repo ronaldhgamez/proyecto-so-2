@@ -15,8 +15,12 @@ namespace console_proyecto_so_2
 
         static void Main(string[] args)
         {
+            var categories = LoadCategories();
+            
+            var classifier = new Classifier(categories);
             
             WebScraping ws = new WebScraping();
+            
             List<Website> list = new List<Website>();
 
             // Scraping BBC news
@@ -27,16 +31,12 @@ namespace console_proyecto_so_2
             // Scraping El Mundo CR news
             list = ws.GetElMundo(ElMundo, list);
 
+            classifier.Classify(list);
+
             foreach (var news in list)
             {
                 news.ToString();
             }
-            
-            var categories = LoadCategories();
-            
-            var classifier = new Classifier(categories);
-
-            var x = classifier.Classify("Casos de covid-19 disminuyeron un 8,3% de una semana a otra La semana epidemiológica 21 que abarcó del 23 al 29 de mayo registró 14.776 casos de covid-19, mientras que la semana epidemiológica anterior que abarca del 16 al 22 de mayo contabilizó 16.128 casos.");
             
             /* Starts Server */
             //Server server = new Server("localhost", 3000);
